@@ -1,4 +1,4 @@
-# ``LightTableParser``
+# ``CollectionParser``
 
 A simple parser that can be used to parse arbitrary collections.
 

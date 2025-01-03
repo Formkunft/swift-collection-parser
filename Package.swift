@@ -1,18 +1,18 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 import PackageDescription
 
 let package = Package(
-	name: "LightTableParser",
+	name: "swift-collection-parser",
 	products: [
 		.library(
-			name: "LightTableParser",
-			targets: ["LightTableParser"]),
+			name: "CollectionParser",
+			targets: ["CollectionParser"]),
 	],
 	targets: [
 		.target(
-			name: "LightTableParser"),
+			name: "CollectionParser"),
 		.testTarget(
-			name: "LightTableParserTests",
-			dependencies: ["LightTableParser"]),
+			name: "CollectionParserTests",
+			dependencies: ["CollectionParser"]),
 	]
 )

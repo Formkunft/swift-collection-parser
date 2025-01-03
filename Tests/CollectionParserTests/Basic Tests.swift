@@ -1,5 +1,5 @@
 import Testing
-import LightTableParser
+import CollectionParser
 
 @Test
 func parseEmptyArray() {
@@ -8,14 +8,14 @@ func parseEmptyArray() {
 	let isAtEnd = parser.isAtEnd
 	#expect(isAtEnd)
 	
-	let head = parser.head()
+	let head = parser.peek()
 	#expect(head == nil)
 }
 
 @Test
 func parseSingleElement() {
 	var parser = Parser(subject: CollectionOfOne(5))
-	let head = parser.head()
+	let head = parser.peek()
 	#expect(head == 5)
 	
 	parser.advance()
@@ -23,6 +23,6 @@ func parseSingleElement() {
 	let isAtEnd = parser.isAtEnd
 	#expect(isAtEnd)
 	
-	let head2 = parser.head()
+	let head2 = parser.peek()
 	#expect(head2 == nil)
 }
