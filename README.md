@@ -17,3 +17,31 @@ guard let string = String(bytes: parser.read(while: { $0 != 0 }), encoding: .utf
 	throw DecodingError.invalidStringValue
 }
 ```
+
+## Using Swift Collection Parser in your project
+
+Add `swift-collection-parser` as a dependency to your package:
+
+```swift
+let package = Package(
+	// ...
+	dependencies: [
+		.package(url: "https://github.com/Formkunft/swift-collection-parser", .upToNextMajor(from: "2.0.0")),
+	],
+	targets: [
+		.target(
+			// ...
+			dependencies: [
+				.product(name: "CollectionParser", package: "swift-collection-parser"),
+			]),
+	]
+)
+```
+
+Then, import `CollectionParser` in your code:
+
+```swift
+import CollectionParser
+
+// ...
+```
