@@ -2,6 +2,9 @@
 
 Swift Collection Parser is a package for a type `Parser<Subject: Collection>`.
 
+- [Documentation](https://swiftpackageindex.com/Formkunft/swift-collection-parser/documentation/collectionparser)
+- [Swift Package Index](https://swiftpackageindex.com/Formkunft/swift-collection-parser)
+
 ## Description
 
 The `Parser` type provides a simple parser that can be used to parse arbitrary collections.
