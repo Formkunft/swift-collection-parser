@@ -15,7 +15,7 @@
 //
 
 /// A parser for accessing the elements of a collection.
-public struct Parser<Subject: Collection>: ~Copyable {
+public struct Parser<Subject: Collection> {
 	public typealias Index = Subject.Index
 	public typealias Element = Subject.Element
 	public typealias SubSequence = Subject.SubSequence
