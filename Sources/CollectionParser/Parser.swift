@@ -320,7 +320,7 @@ public struct Parser<Subject: Collection>: ~Copyable {
 	
 	// MARK: View
 	
-	/// Creates a nested parser that parsed a view of the subject.
+	/// Creates a nested parser that operates on a view of the subject.
 	///
 	/// The view must share indices with the subject.
 	/// Most importantly, the current parser position must be valid for the view as it will be used as the initial position of the nested parser.
