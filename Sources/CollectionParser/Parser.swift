@@ -121,6 +121,7 @@ public struct Parser<Subject: Collection> {
 		}
 	}
 	
+	#if !$Embedded
 	/// Advances the parser by matching the given regex against the prefix of the remainder of the subject.
 	///
 	/// If the regex does not match the prefix of the remainder of the subject, the parser will not be advanced.
@@ -135,6 +136,7 @@ public struct Parser<Subject: Collection> {
 		}
 		self.position = match.range.upperBound
 	}
+	#endif
 	
 	// MARK: Peek
 	
@@ -201,6 +203,7 @@ public struct Parser<Subject: Collection> {
 		self.remainder().prefix(prefix.count) == prefix
 	}
 	
+	#if !$Embedded
 	/// Returns whether the prefix of the remainder of the subject matches the given regex.
 	///
 	/// If the regex includes a transformation closure that throws an error, the error will be ignored and `false` will be returned.
@@ -212,6 +215,7 @@ public struct Parser<Subject: Collection> {
 	public func hasPrefix(_ regex: some RegexComponent) -> Bool where SubSequence == Substring {
 		self.remainder().prefixMatch(of: regex) != nil
 	}
+	#endif
 	
 	// MARK: Pop
 	
@@ -303,6 +307,7 @@ public struct Parser<Subject: Collection> {
 		return prefix
 	}
 	
+	#if !$Embedded
 	/// Returns the match of the given regex if it matches the prefix of the remainder of the subject, and advances the parser by the match if so.
 	///
 	/// - Parameter regex: The regex to match.
@@ -317,6 +322,7 @@ public struct Parser<Subject: Collection> {
 		self.position = match.range.upperBound
 		return match
 	}
+	#endif
 	
 	// MARK: View
 	
